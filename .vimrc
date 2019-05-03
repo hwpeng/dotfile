@@ -58,3 +58,9 @@ inoremap <s-tab> <c-n>
 " Snippets
 " Read an empty verilog module template and move cursor to name
 nnoremap ,v :read $HOME/.vim/snippet/.module.v<CR>$i
+
+" Disable arrow keys 
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
