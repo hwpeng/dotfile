@@ -13,8 +13,6 @@ set incsearch
 
 set nu rnu
 
-execute pathogen#infect()
-
 let g:go_version_warning = 0
 
 colo focuspoint
@@ -39,6 +37,16 @@ command! MakeTages !ctags -R .
 set linebreak
 
 set showcmd
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plug in management
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call plug#begin('~/.vim/plugged')
+
+Plug 'scrooloose/nerdtree'
+Plug 'nachumk/systemverilog.vim'
+
+call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MULTIPURPOSE TAB KEY
