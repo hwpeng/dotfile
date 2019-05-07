@@ -167,7 +167,7 @@ alias bashrc='vim ~/.bashrc'
 alias diskspace="du -S | sort -n -r |more"
 alias go="tmux a -t"
 alias subl="~/software/sublime_text_3/sublime_text"
-
+alias cpwd="pwd | tr -d '\n' | pbcopy && echo 'pwd copied to clipboard'"
 # cd function
 shopt -s cdspell
 complete -d cd
