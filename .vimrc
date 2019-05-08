@@ -1,5 +1,5 @@
-syntax on
 filetype plugin indent on
+syntax on
 
 set autoindent
 set smartindent
@@ -72,3 +72,10 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+" Local vim configure file
+try
+	source ~/.vimrc_local
+catch
+	" No such file? Just ignore it.
+endtry
