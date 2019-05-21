@@ -38,6 +38,9 @@ set linebreak
 
 set showcmd
 
+" Set leader key to space
+let mapleader=" "
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plug in management
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -45,6 +48,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'nachumk/systemverilog.vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -72,6 +76,11 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+" Close file easily
+nnoremap <leader>q :q<CR>
+nnoremap <leader>wq :wq<CR>
+nnoremap <leader>q! :q!<CR>
 
 " Local vim configure file
 try
