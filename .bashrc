@@ -96,7 +96,8 @@ PROMPT_COMMAND=parse_git_branch
 PS_INFO="\u@\h$RESET:\w"
 PS_GIT="\$PS_BRANCH"
 PS_TIME="\[\033[\$((COLUMNS-20))G\] [\d - \A]"
-export PS1="\${PS_FILL}\[\033[0G\]${PS_INFO} ${PS_GIT}${PS_TIME}\n${RESET}\$ "
+#export PS1="\${PS_FILL}\[\033[0G\]${PS_INFO} ${PS_GIT}${PS_TIME}\n${RESET}\$ "
+export PS1="${PS_INFO} ${PS_GIT}\$ "
 ##################################################################################
 
 # Extract function for common file formats, from https://ftp.gnu.org/gnu/gtypist/gtypist-2.9.tar.xz
@@ -144,7 +145,7 @@ IFS=$SAVEIFS
 ##################################################################################
 
 # Terminal vim mode in all GNU Readline
-set editing-mode vi 
+# set editing-mode vi 
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

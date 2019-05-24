@@ -79,8 +79,8 @@ noremap <Right> <Nop>
 
 " Close file easily
 nnoremap <leader>q :q<CR>
-nnoremap <leader>wq :wq<CR>
-nnoremap <leader>q! :q!<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>1q :q!<CR>
 
 " Local vim configure file
 try
