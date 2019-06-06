@@ -10,6 +10,7 @@ set shiftwidth=4
 set showmatch
 set ruler
 set incsearch
+set smartcase
 
 set nu rnu
 
@@ -40,6 +41,9 @@ set showcmd
 
 " Set leader key to space
 let mapleader=" "
+
+set splitbelow
+set splitright
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plug in management
@@ -81,6 +85,9 @@ noremap <Right> <Nop>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>1q :q!<CR>
+
+" Open Nerdtree
+nnoremap <leader>n :NERDTree<CR>
 
 " Local vim configure file
 try
