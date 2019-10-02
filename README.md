@@ -1,1 +1,3 @@
-# HWP-Working-Environment-Configuration
+# dotfile
+
+Personal working environment configuration for bash, vim, tmux, etc.
