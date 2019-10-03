@@ -41,6 +41,7 @@ set showcmd
 
 " Set leader key to space
 let mapleader=" "
+let maplocalleader=" "
 
 set splitbelow
 set splitright
@@ -53,6 +54,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'nachumk/systemverilog.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'lervag/vimtex'
 
 call plug#end()
 
@@ -88,6 +90,13 @@ nnoremap <leader>1q :q!<CR>
 
 " Open Nerdtree
 nnoremap <leader>n :NERDTree<CR>
+
+" Tag browsing
+nnoremap <leader>g :vsp <CR>:exec("tag ".expand("<cword>"))<CR> 
+
+" vimtex settings
+let g:vimtex_compiler_latexmk = {'callback' : 0}
+let g:tex_flavor = 'latex'
 
 " Local vim configure file
 try

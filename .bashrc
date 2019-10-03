@@ -152,7 +152,7 @@ function makezip() { zip -r "${1%%/}.zip" "$1" ; }
 ##################################################################################
 
 # Terminal vim mode in all GNU Readline
-# set editing-mode vi 
+set -o vi 
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
