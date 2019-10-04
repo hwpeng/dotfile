@@ -95,8 +95,18 @@ nnoremap <leader>n :NERDTree<CR>
 nnoremap <leader>g :vsp <CR>:exec("tag ".expand("<cword>"))<CR> 
 
 " vimtex settings
-let g:vimtex_compiler_latexmk = {'callback' : 0}
+let g:vimtex_compiler_latexmk = {
+	\ 'callback' : 0,
+	\ 'build_dir': 'build',
+	\}
 let g:tex_flavor = 'latex'
+
+" Google selected text
+function! GoogleSearch()
+	let searchterm = getreg("g")
+	silent! exec "silent! !google-chrome \"http://google.com/search?q=" . searchterm . "\" &"
+endfunction
+vnoremap <leader>? "gy<Esc>:call GoogleSearch()<CR><c-L>
 
 " Local vim configure file
 try
