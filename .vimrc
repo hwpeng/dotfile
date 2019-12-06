@@ -58,6 +58,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'lervag/vimtex'
 Plug 'vimwiki/vimwiki'
 Plug 'scrooloose/nerdcommenter'
+Plug '~/.fzf'
 
 call plug#end()
 
@@ -116,9 +117,9 @@ endfunction
 vnoremap <leader>? "gy<Esc>:call GoogleSearch()<CR><c-L>
 
 " Navigating with guides
-inoremap <leader><leader> <Esc>/<++><Enter>"_c4l
-vnoremap <leader><leader> <Esc>/<++><Enter>"_c4l
-map <leader><leader> <Esc>/<++><Enter>"_c4l
+inoremap <leader>` <Esc>/<++><Enter>"_c4l
+vnoremap <leader>` <Esc>/<++><Enter>"_c4l
+map <leader>` <Esc>/<++><Enter>"_c4l
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Verilog 
