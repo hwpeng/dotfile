@@ -6,6 +6,7 @@ set smartindent
 
 set tabstop=4
 set shiftwidth=4
+set expandtab
 
 set showmatch
 set ruler
@@ -64,9 +65,9 @@ call plug#end()
 
 " vimtex settings
 let g:vimtex_compiler_latexmk = {
-	\ 'callback' : 0,
-	\ 'build_dir': 'build',
-	\}
+    \ 'callback' : 0,
+    \ 'build_dir': 'build',
+    \}
 let g:tex_flavor = 'latex'
 
 " nerdtree settings
@@ -111,8 +112,8 @@ nnoremap <leader>g :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Google selected text
 function! GoogleSearch()
-	let searchterm = getreg("g")
-	silent! exec "silent! !google-chrome \"http://google.com/search?q=" . searchterm . "\" &"
+    let searchterm = getreg("g")
+    silent! exec "silent! !google-chrome \"http://google.com/search?q=" . searchterm . "\" &"
 endfunction
 vnoremap <leader>? "gy<Esc>:call GoogleSearch()<CR><c-L>
 
@@ -156,10 +157,10 @@ autocmd FileType tex inoremap <leader>co \begin{columns}[T]<Enter>\begin{column}
 autocmd FileType tex inoremap <leader>no \node[] (<++>) {<++>};<Enter><++><Esc>kf]i
 autocmd FileType tex inoremap <leader>ar \draw[-latex] () -- (<++>);<Enter><++><Esc>kf)i
 
-	
+
 " Local vim configure file
 try
-	source ~/.vimrc_local
+    source ~/.vimrc_local
 catch
-	" No such file? Just ignore it.
+" No such file? Just ignore it.
 endtry
