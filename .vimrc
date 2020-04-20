@@ -123,6 +123,12 @@ vnoremap <leader>` <Esc>/<++><Enter>"_c4l
 map <leader>` <Esc>/<++><Enter>"_c4l
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Python
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Run current file
+autocmd FileType python map <leader>r :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Verilog 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Read an empty verilog module template and move cursor to name
