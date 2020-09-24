@@ -4,8 +4,8 @@ syntax on
 set autoindent
 set smartindent
 
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 set showmatch
@@ -54,7 +54,8 @@ set splitbelow splitright
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
-Plug 'nachumk/systemverilog.vim'
+" Plug 'nachumk/systemverilog.vim'
+Plug 'vhda/verilog_systemverilog.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'lervag/vimtex'
 Plug 'vimwiki/vimwiki'
@@ -134,6 +135,9 @@ autocmd FileType python map <leader>r :w<CR>:exec '!python3' shellescape(@%, 1)<
 " Read an empty verilog module template and move cursor to name
 nnoremap <leader>v :read $HOME/.vim/snippet/.module.v<CR>$i
 
+" Set the filetype based on the file's extension, but only if
+" " 'filetype' has not already been set
+au BufRead,BufNewFile *.sva setfiletype systemverilog
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Latex 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

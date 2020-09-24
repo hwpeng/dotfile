@@ -173,7 +173,7 @@ alias h='history'
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
 alias diskspace="du -S | sort -n -r |more"
-alias go="tmux a -t"
+alias gotmux="tmux a -t"
 # This only works under mac
 # alias cpwd="pwd | tr -d '\n' | pbcopy && echo 'pwd copied to clipboard'"
 
@@ -186,7 +186,7 @@ alias ....="cd ../../.."
 
 # Source global definitions
 if [ -f ~/.bashrc_local ]; then
-	. ~/.bashrc_local 
+    . ~/.bashrc_local 
 fi
 
 
