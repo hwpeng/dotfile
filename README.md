@@ -26,6 +26,6 @@ vim -cmd '' -c ':PlugInstall' -c 'qa!'
 
 3. Tmux
 ```
-rm -f .tmux_conf
+rm -f .tmux.conf
 ln -s dotfile/.tmux.conf .
 ```
