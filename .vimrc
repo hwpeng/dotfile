@@ -17,7 +17,9 @@ set nu rnu
 
 let g:go_version_warning = 0
 
-colo focuspoint
+" colo focuspoint
+colo gruvbox
+set bg=dark
 
 " Highlight current line
 set cursorline
